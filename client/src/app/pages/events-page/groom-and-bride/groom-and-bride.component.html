@@ -1,0 +1,82 @@
+<div class="groom-and-bride">
+  <form [formGroup]="groomAndBrideForm">
+
+    <h4>Groom and bride account email</h4>
+    <div class="form-control-section">
+      <div class="form-control ml">
+        <label>Email</label>
+        <input type="email" formControlName="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+      </div>
+      <div class="form-control">
+        <label>Wedding name</label>
+        <input type="text" formControlName="weddingName">
+      </div>
+    </div>
+
+    <h4>Groom information</h4>
+    <div class="form-control-section space-between">
+      <div class="form-control">
+        <label>First name</label>
+        <input type="text" formControlName="groomFirstName">
+      </div>
+      <div class="form-control">
+        <label>Middle name</label>
+        <input type="text" formControlName="groomMiddleName">
+      </div>
+      <div class="form-control">
+        <label>Last name</label>
+        <input type="text" formControlName="groomLastName">
+      </div>
+      <div class="form-control">
+        <label>Date of birth</label>
+        <input type="date" placeholder="Choose date" formControlName="groomDateOfBirth">
+      </div>
+      <div class="form-control">
+        <label>Phone number</label>
+        <input type="text" formControlName="groomPhoneNumber">
+        <!--pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" << do not add because do not know what format need >>-->
+      </div>
+      <div class="form-control">
+        <label>Gender</label>
+        <select formControlName="groomGender">
+          <option value="" selected [ngValue]="null" disabled>Choose gender</option>
+          <option *ngFor="let g of gender" [ngValue]="g.value">{{g.value}}</option>
+        </select>
+      </div>
+    </div>
+
+    <h4>Bride information</h4>
+    <div class="form-control-section space-between">
+      <div class="form-control">
+        <label>First name</label>
+        <input type="text" formControlName="brideFirstName">
+      </div>
+      <div class="form-control">
+        <label>Middle name</label>
+        <input type="text" formControlName="brideMiddleName">
+      </div>
+      <div class="form-control">
+        <label>Last name</label>
+        <input type="text" formControlName="brideLastName">
+      </div>
+      <div class="form-control">
+        <label>Date of birth</label>
+        <input type="date" placeholder="Choose date" formControlName="brideDateOfBirth">
+      </div>
+      <div class="form-control">
+        <label>Phone number</label>
+        <input type="text" formControlName="bridePhoneNumber">
+      </div>
+      <div class="form-control">
+        <label>Gender</label>
+        <select formControlName="brideGender">
+          <option value="" selected [ngValue]="null" disabled>Choose gender</option>
+          <option *ngFor="let g of gender" [ngValue]="g.value">{{g.value}}</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="next" (click)="submitGroomAndBrideForm()" [disabled]="groomAndBrideForm.invalid" [ngClass]="{'disabled': groomAndBrideForm.invalid}">Next</button>
+
+  </form>
+</div>

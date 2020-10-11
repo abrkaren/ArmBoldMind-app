@@ -1,0 +1,39 @@
+.guest-list input {
+  width: 345px;
+}
+
+.guest-list select {
+  width: 365px;
+}
+
+.add-to-list {
+  width: 215px;
+  height: 42px;
+  background: #009E89;
+  border-radius: 21px;
+  font: normal normal 600 16px/21px Segoe UI;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s linear;
+}
+
+table {
+  width: 1147px;
+  border-collapse: collapse;
+  margin: 100px auto 80px auto;
+}
+
+tr {
+  height: 60px;
+  text-align: left;
+  font: normal normal 600 14px/19px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+tbody tr {
+  border-bottom: 1px solid lightgray;
+}

@@ -1,0 +1,42 @@
+<div class="events-list-page">
+  <div class="wrapper">
+    <div class="content">
+      <div class="event flex" *ngFor="let e of events; let i = index">
+        <b style="margin-right: 4px">{{i+1 + '. '}}</b>
+        <div class="groomAndBride">
+          <p>{{e.email}}</p>
+          <p>{{e.weddingName}}</p>
+          <p>{{e.groomFirstName}}</p>
+          <p>{{e.groomMiddleName}}</p>
+          <p>{{e.groomLastName}}</p>
+          <p>{{e.groomDateOfBirth}}</p>
+          <p>{{e.groomPhoneNumber}}</p>
+          <p>{{e.groomGender}}</p>
+          <p>{{e.BrideFirstName}}</p>
+          <p>{{e.BrideMiddleName}}</p>
+          <p>{{e.BrideLastName}}</p>
+          <p>{{e.BrideDateOfBirth}}</p>
+          <p>{{e.BridePhoneNumber}}</p>
+          <p>{{e.BrideGender}}</p>
+        </div>
+        <div class="eventDescription">
+          <p>{{e.ceremonyType}}</p>
+          <p>{{e.hotel}}</p>
+          <p>{{e.checkInDate}}</p>
+          <p>{{e.checkOutDate}}</p>
+          <p>{{e.honeymoon}}</p>
+          <p>{{e.bookedRoom}}</p>
+          <p>{{e.roomNumber}}</p>
+        </div>
+        <div class="guest">
+          <p>{{e.guestFirstName}}</p>
+          <p>{{e.guestMiddleName}}</p>
+          <p>{{e.guestLastName}}</p>
+          <p>{{e.guestPhoneNumber}}</p>
+          <p>{{e.guestEmail}}</p>
+          <p>{{e.guestSide}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

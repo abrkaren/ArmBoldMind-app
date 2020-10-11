@@ -1,0 +1,58 @@
+<div class="event-description">
+  <form [formGroup]="eventDescriptionForm">
+
+    <h4>Wedding information</h4>
+    <div class="form-control-section space-between">
+      <div class="form-control">
+        <label>Ceremony type</label>
+        <select formControlName="ceremonyType">
+          <option value="" selected [ngValue]="null" disabled>Choose type</option>
+          <option *ngFor="let c of ceremonyTypes" [ngValue]="c.value">{{c.value}}</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <label>Hotel</label>
+        <select formControlName="hotel">
+          <option value="" selected [ngValue]="null" disabled>Choose hotel</option>
+          <option *ngFor="let h of hotels" [ngValue]="h.value">{{h.value}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-control-section space-between">
+      <div class="form-control">
+        <label>Check in date</label>
+        <input type="date" formControlName="checkInDate" placeholder="Choose date">
+      </div>
+      <div class="form-control">
+        <label>Check out date</label>
+        <input type="date" formControlName="checkOutDate" placeholder="Choose date">
+      </div>
+    </div>
+
+    <div class="form-control-section">
+      <div class="form-control flex">
+        <input type="checkbox" formControlName="honeymoon">
+        <span>Honeymoon</span>
+      </div>
+    </div>
+
+    <div class="form-control-section">
+      <div class="form-control flex">
+        <input type="checkbox" formControlName="bookedRoom">
+        <span>Booked room</span>
+      </div>
+    </div>
+
+    <div class="form-control-section">
+      <div class="form-control">
+        <label>Room number</label>
+        <input type="text" formControlName="roomNumber">
+      </div>
+    </div>
+
+    <button class="back" (click)="cancelEventDescriptionForm()">Back</button>
+    <button class="next" (click)="submitEventDescriptionForm()" [disabled]="eventDescriptionForm.invalid" [ngClass]="{'disabled': eventDescriptionForm.invalid}">Next</button>
+
+  </form>
+</div>

@@ -1,0 +1,200 @@
+.events-page {
+  background: #F6FBF9;
+  padding: 60px 0 45px 0;
+}
+
+// ---- breadcrumbs ----
+.breadcrumbs {
+  height: 132px;
+  background: #FFFFFF;
+  box-shadow: 0 3px 14px #00000029;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  width: 1143px;
+  margin: auto;
+}
+
+.breadcrumbs-line {
+  padding-top: 24px;
+}
+
+.breadcrumbs-line ul:before {
+  content: '';
+  position: absolute;
+  background: #EEEEEE;
+  width: 1143px;
+  height: 11px;
+}
+
+.breadcrumbs-line li {
+  border-radius: 50%;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #EEEEEE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.breadcrumbs-line li span {
+  width: 22px;
+  height: 22px;
+  background: #D1D1D1;
+  border-radius: 50%;
+  position: relative;
+  z-index:1;
+}
+
+.step1:after {
+  content: "";
+  width: 190px;
+  height: 11px;
+  background: #F58BAB;
+  position: absolute;
+  left: 28px;
+  border-radius: 16px;
+}
+
+.step2-active {
+  background: #F58BAB !important;
+}
+
+.step2-active:after {
+  content: "";
+  width: 350px;
+  height: 11px;
+  background: #F58BAB;
+  position: absolute;
+  left: -156px;
+  border-radius: 16px;
+}
+
+.step2-active span {
+  background: #EE386F !important;
+}
+
+.step3-active {
+  background: #F58BAB !important;
+}
+
+.step3-active:after {
+  content: "";
+  width: 280px;
+  height: 11px;
+  background: #F58BAB;
+  position: absolute;
+  left: -180px;
+  border-radius: 16px;
+}
+
+.step3-active span {
+  background: #EE386F !important;
+}
+
+.step4-active:after {
+  content: "";
+  width: 170px;
+  height: 11px;
+  background: #F58BAB;
+  position: absolute;
+  left: -276px;
+  border-radius: 16px;
+}
+
+.step1 {
+  background: #F58BAB!important;
+}
+
+.step1 span {
+  background: #EE386F!important;
+}
+
+.step1:before{
+  content: "Step 1";
+  position: absolute;
+  top: 50px;
+  width: 44px;
+  left: 9px;
+  font: normal normal bold 13px/17px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+}
+.step1 span:before{
+  content: "Groom and bride";
+  position: absolute;
+  top: 62px;
+  width: 124px;
+  font: normal normal bold 13px/17px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+.step2:before{
+  content: "Step 2";
+  position: absolute;
+  top: 50px;
+  width: 44px;
+  left: 2px;
+  font: normal normal bold 13px/17px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+}
+.step2 span:before{
+  content: "Event description";
+  position: absolute;
+  top: 62px;
+  width: 124px;
+  font: normal normal bold 13px/17px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+  left: -42px;
+}
+
+.step3:before{
+  content: "Step 3";
+  position: absolute;
+  top: 50px;
+  width: 44px;
+  left: 2px;
+  font: normal normal bold 13px/17px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+}
+.step3 span:before{
+  content: "Guest list";
+  position: absolute;
+  top: 62px;
+  width: 124px;
+  font: normal normal bold 13px/17px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+  left: -18px;
+}
+
+.step4:before{
+  content: "Step 4";
+  position: absolute;
+  top: 50px;
+  width: 44px;
+  font: normal normal bold 13px/17px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+  right: 3px;
+}
+.step4 span:before{
+  content: "Vendors";
+  position: absolute;
+  top: 62px;
+  font: normal normal bold 13px/17px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+  right: 0;
+}
+// ---- breadcrumbs ----
+

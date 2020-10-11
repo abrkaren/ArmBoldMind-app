@@ -1,0 +1,64 @@
+.header{
+  background: #FFFFFF 0 0 no-repeat padding-box;
+  box-shadow: 0 3px 18px #00000029;
+  min-height: 183px;
+  position: relative;
+  z-index: 1;
+}
+
+.menu {
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  min-height: 169px;
+
+}
+
+.menu ul li a {
+  text-decoration: none;
+  padding: 12px 16px;
+  font: normal normal 600 20px/27px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+.active{
+  border-bottom: 3px solid #EE386F;
+}
+
+
+// ---- responsive ---- \\
+@media (max-width: 1200px) {
+  .menu ul li a {
+    padding: 12px 0;
+  }
+}
+@media (max-width: 992px) {
+  .menu ul li a {
+    font-size: 16px;
+  }
+  .header {
+    min-height: 181px;
+  }
+}
+@media (max-width: 576px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu ul li a {
+    padding: 2px 0;
+  }
+  .header {
+    padding: 8px 0;
+  }
+}
+// ---- responsive ---- \\
+

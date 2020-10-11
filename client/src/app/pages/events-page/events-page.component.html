@@ -1,0 +1,27 @@
+<div class="events-page">
+  <div class="wrapper">
+    <div class="container">
+
+      <div class="breadcrumbs">
+        <div class="breadcrumbs-line">
+          <ul>
+            <li class="step1"><span class="sm-circle"></span></li>
+            <li class="step2" [ngClass]="{'step2-active' : step2 || step3 || step4}"><span class="sm-circle"></span></li>
+            <li class="step3" [ngClass]="{'step3-active' : step3 || step4}"><span class="sm-circle"></span></li>
+            <li class="step4" [ngClass]="{'step4-active' : step4}"><span class="sm-circle"></span></li>
+          </ul>
+          <div class="groom-and-bride"></div>
+        </div>
+      </div>
+
+      <div class="content">
+        <app-groom-and-bride (onClick)="submitGroomAndBrideForm($event)" *ngIf="step1"></app-groom-and-bride>
+        <app-event-description (onClick)="submitEventDescriptionForm($event)" (onCancel)="cancelEventDescriptionForm($event)" *ngIf="step2"></app-event-description>
+        <app-guest-list (onClick)="submitGuestListForm($event)" (onCancel)="cancelGuestListForm($event)" *ngIf="step3"></app-guest-list>
+        <app-vendors (onClick)="createEvent($event)" (onCancel)="cancelVendors($event)" *ngIf="step4"></app-vendors>
+        <app-event-created (onClick)="closePopup($event)" *ngIf="eventCreated"></app-event-created>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="guest-list">
+
+  <form [formGroup]="guestListForm">
+    <h4>Add guest</h4>
+    <div class="form-control-section space-between">
+      <div class="form-control">
+        <label>First name</label>
+        <input type="text" formControlName="guestFirstName">
+      </div>
+      <div class="form-control">
+        <label>Middle name</label>
+        <input type="text" formControlName="guestMiddleName">
+      </div>
+      <div class="form-control">
+        <label>Last name</label>
+        <input type="text" formControlName="guestLastName">
+      </div>
+      <div class="form-control">
+        <label>Phone number</label>
+        <input type="text" formControlName="guestPhoneNumber">
+      </div>
+      <div class="form-control">
+        <label>Email</label>
+        <input type="email" formControlName="guestEmail" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+      </div>
+      <div class="form-control">
+        <label>Side</label>
+        <select formControlName="guestSide">
+          <option value="" selected [ngValue]="null" disabled>Choose side</option>
+          <option *ngFor="let s of side" [ngValue]="s.value">{{s.value}}</option>
+        </select>
+      </div>
+    </div>
+    <button class="add-to-list" (click)="addToList()" [disabled]="guestListForm.invalid" [ngClass]="{'disabled': guestListForm.invalid}">Add to list</button>
+  </form>
+
+  <div class="guest-lists">
+    <table>
+      <thead>
+      <tr>
+        <th>№</th>
+        <th>Guest</th>
+        <th>Phone number</th>
+        <th>Email</th>
+        <th>Side</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let g of guests; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{g.guestFirstName}} {{g.guestMiddleName}} {{g.guestLastName}}</td>
+        <td>{{g.guestPhoneNumber}}</td>
+        <td>{{g.guestEmail}}</td>
+        <td>{{g.guestSide}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="buttons-section">
+    <button class="back" (click)="cancelGuestListForm()">Back</button>
+   <button class="next" (click)="submitGuestListForm()" [disabled]="guestListForm.invalid" [ngClass]="{'disabled': guestListForm.invalid}">Next</button>
+  </div>
+
+</div>

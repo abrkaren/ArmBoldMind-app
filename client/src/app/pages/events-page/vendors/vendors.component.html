@@ -1,0 +1,28 @@
+<div class="vendors">
+  <h4>Vendors</h4>
+  <div class="vendors-list">
+      <div *ngFor="let v of vendors" class="vendor">
+        <div class="vendor-content">
+          <div class="img">
+            <img src="{{v.imageSrc}}" alt="">
+          </div>
+          <div class="info">
+            <h3>{{v.title}}</h3>
+            <p>{{v.content}}</p>
+          </div>
+          <div class="more">
+            <p>{{v.count + "product"}} / {{v.type}}</p>
+          </div>
+        </div>
+        <div class="details-button">
+          <button>Details</button>
+        </div>
+      </div>
+  </div>
+
+  <div class="buttons-section">
+    <button class="back" (click)="cancelVendors()">Back</button>
+    <button class="next" (click)="createEvent()">Create event</button>
+  </div>
+
+</div>

@@ -1,0 +1,60 @@
+.vendors h3 {
+  text-align: left;
+  font: normal normal 600 22px/30px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+.vendors .info p {
+  text-align: left;
+  font: normal normal normal 16px/21px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+  max-width: 516px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-right: 86px;
+}
+
+.vendors .more p {
+  text-align: left;
+  font: normal normal 600 18px/24px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+.vendor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  padding: 20px 0;
+}
+
+.vendor-content {
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  margin-right: 37px;
+}
+
+.details-button button {
+  width: 169px;
+  height: 42px;
+  background: #009E89;
+  border-radius: 21px;
+  font: normal normal 600 16px/21px Segoe UI;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+}
+
+.buttons-section {
+  margin-top: 140px;
+}

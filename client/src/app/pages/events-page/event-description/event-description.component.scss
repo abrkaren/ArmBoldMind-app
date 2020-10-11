@@ -1,0 +1,23 @@
+.event-description input:not([type="checkbox"]) {
+  width: 543px;
+}
+
+.event-description input[type="checkbox"]{
+  width: 25px;
+  height: 25px;
+  background: #FFFFFF 0 0;
+  border: 1px solid #B8B8B8;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.event-description span {
+  font: normal normal normal 16px/21px Segoe UI;
+  letter-spacing: 0;
+  color: #000000;
+  margin-left: 12px;
+}
+
+.event-description select {
+  width: 563px;
+}

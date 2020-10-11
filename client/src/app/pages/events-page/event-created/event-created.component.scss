@@ -1,0 +1,55 @@
+.popup-bg {
+  background: #C0C0C0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  width: 403px;
+  height: 437px;
+  background: #FFFFFF 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button {
+  width: 215px;
+  height: 42px;
+  background: #EE386F;
+  border-radius: 21px;
+  font: normal normal 600 16px/21px Segoe UI;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.popup h6 {
+  font: normal normal bold 24px/31px Futura PT;
+  letter-spacing: 0;
+  color: #000000;
+  margin-top: 45px;
+}
+
+.popup p {
+  width: 206px;
+  text-align: center;
+  font: normal normal normal 18px/23px Futura PT;
+  letter-spacing: 0;
+  color: #393939;
+  margin: 15px auto 53px auto;
+}
+
+.popup img {
+  width: 100px;
+}
